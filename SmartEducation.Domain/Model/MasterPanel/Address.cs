@@ -13,12 +13,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public int? addressCategoryId { get; set; }
         public AddressCategory addressCategory { get; set; }
 
-        public int? resourceId { get; set; }
-        public Resource resource { get; set; }
-
-
-        public int? companyId { get; set; }
-        public Company company { get; set; }
 
         public int? countryId { get; set; }
         public Country country { get; set; }
