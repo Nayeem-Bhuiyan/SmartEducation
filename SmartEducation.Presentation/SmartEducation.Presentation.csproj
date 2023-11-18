@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartEducation.Application\SmartEducation.Application.csproj" />
+    <ProjectReference Include="..\SmartEducation.DataAccess\SmartEducation.DataAccess.csproj" />
+    <ProjectReference Include="..\SmartEducation.Service\SmartEducation.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Account\Controllers\" />
+    <Folder Include="Areas\Account\Data\" />
+    <Folder Include="Areas\Account\Models\" />
+    <Folder Include="Areas\Account\Views\" />
+    <Folder Include="Areas\Attendence\Controllers\" />
+    <Folder Include="Areas\Attendence\Data\" />
+    <Folder Include="Areas\Attendence\Models\" />
+    <Folder Include="Areas\Attendence\Views\" />
+    <Folder Include="Areas\Auth\Data\" />
+    <Folder Include="Areas\Event\Controllers\" />
+    <Folder Include="Areas\Event\Data\" />
+    <Folder Include="Areas\Event\Models\" />
+    <Folder Include="Areas\Event\Views\" />
+    <Folder Include="Areas\Exam\Controllers\" />
+    <Folder Include="Areas\Exam\Data\" />
+    <Folder Include="Areas\Exam\Models\" />
+    <Folder Include="Areas\Exam\Views\" />
+    <Folder Include="Areas\Guardian\Controllers\" />
+    <Folder Include="Areas\Guardian\Data\" />
+    <Folder Include="Areas\Guardian\Models\" />
+    <Folder Include="Areas\Guardian\Views\" />
+    <Folder Include="Areas\MasterPanel\Data\" />
+    <Folder Include="Areas\MasterPanel\Models\" />
+    <Folder Include="Areas\MasterPanel\Views\" />
+    <Folder Include="Areas\Student\Controllers\" />
+    <Folder Include="Areas\Student\Data\" />
+    <Folder Include="Areas\Student\Models\" />
+    <Folder Include="Areas\Student\Views\" />
+    <Folder Include="Areas\Teacher\Controllers\" />
+    <Folder Include="Areas\Teacher\Data\" />
+    <Folder Include="Areas\Teacher\Models\" />
+    <Folder Include="Areas\Teacher\Views\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\Account\" />
+    <Folder Include="Model\Attendence\" />
+    <Folder Include="Model\Event\" />
+    <Folder Include="Model\Exam\" />
+    <Folder Include="Model\Guardian\" />
+    <Folder Include="Model\Student\" />
+    <Folder Include="Model\Teacher\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartEducation.Application\SmartEducation.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EntityService\Account\" />
+    <Folder Include="EntityService\Attendence\" />
+    <Folder Include="EntityService\Event\" />
+    <Folder Include="EntityService\Exam\" />
+    <Folder Include="EntityService\Guardian\" />
+    <Folder Include="EntityService\Student\" />
+    <Folder Include="EntityService\Teacher\" />
+    <Folder Include="ServiceHelper\" />
+  </ItemGroup>
+
+</Project>

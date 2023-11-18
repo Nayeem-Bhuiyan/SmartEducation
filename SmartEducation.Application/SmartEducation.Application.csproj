@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartEducation.Domain\SmartEducation.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IEntityRepository\Account\" />
+    <Folder Include="IEntityRepository\Attendence\" />
+    <Folder Include="IEntityRepository\Event\" />
+    <Folder Include="IEntityRepository\Exam\" />
+    <Folder Include="IEntityRepository\Guardian\" />
+    <Folder Include="IEntityRepository\Student\" />
+    <Folder Include="IEntityRepository\Teacher\" />
+    <Folder Include="IEntityService\Account\" />
+    <Folder Include="IEntityService\Attendence\" />
+    <Folder Include="IEntityService\Event\" />
+    <Folder Include="IEntityService\Exam\" />
+    <Folder Include="IEntityService\Guardian\" />
+    <Folder Include="IEntityService\Student\" />
+    <Folder Include="IEntityService\Teacher\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
