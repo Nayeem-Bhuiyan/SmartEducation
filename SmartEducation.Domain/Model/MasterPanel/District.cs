@@ -9,6 +9,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class District : BaseEntity
     {
+        [Required]
         public string districtCode { get; set; }
         [Required]
         public string districtName { get; set; }

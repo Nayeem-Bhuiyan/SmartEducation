@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Division : BaseEntity
+    public class Designation : BaseEntity
     {
         [Required]
-        public string divisionCode { get; set; }
+        public string designationCode { get; set; }
+
         [Required]
-        public string divisionName { get; set; }
+        public string designationName { get; set; }
+
         public string shortName { get; set; }
-        public int countryId { get; set; }
-        public Country country { get; set; }
+
     }
 }

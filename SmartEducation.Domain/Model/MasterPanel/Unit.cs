@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Language:BaseEntity
+    public class Unit : BaseEntity
     {
-        [StringLength(150, ErrorMessage = "Maximum length should be 150")]
-        public string languageName { get; set; }
-        public string shortName { get; set; }
+        [MaxLength(250)]
+        public string unitName { get; set; }
+        [MaxLength(250)]
+        public string description { get; set; }
     }
 }

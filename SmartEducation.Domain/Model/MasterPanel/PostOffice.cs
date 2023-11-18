@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Language:BaseEntity
+    public class PostOffice : BaseEntity
     {
-        [StringLength(150, ErrorMessage = "Maximum length should be 150")]
-        public string languageName { get; set; }
-        public string shortName { get; set; }
+        [Required]
+        public string postCode { get; set; }
+        [Required]
+        public string postOfficeName { get; set; }
+
+        public string thanaCode { get; set; }
+
     }
 }

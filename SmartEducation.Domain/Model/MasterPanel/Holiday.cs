@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Language:BaseEntity
+    public class Holiday:BaseEntity
     {
-        [StringLength(150, ErrorMessage = "Maximum length should be 150")]
-        public string languageName { get; set; }
-        public string shortName { get; set; }
+        public DateTime? weeklyHoliday { get; set; }
+        [Required]
+        public string holidayName { get; set; }
+        [Required]
+        public int AccademicYearId { get; set; }
     }
 }
