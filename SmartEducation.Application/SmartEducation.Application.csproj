@@ -25,7 +25,6 @@
     <Folder Include="IEntityService\Guardian\" />
     <Folder Include="IEntityService\Student\" />
     <Folder Include="IEntityService\Teacher\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>
