@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/SmartEducation
+/SmartEducation.Application/bin/Debug/net8.0
+/SmartEducation.Application/obj
+/SmartEducation.DataAccess/bin/Debug/net8.0
+/SmartEducation.DataAccess/obj
+/SmartEducation.Domain/bin/Debug/net8.0
+/SmartEducation.Domain/obj
+/SmartEducation.Presentation/bin/Debug/net8.0
+/SmartEducation.Presentation/obj
+/SmartEducation.Service/bin/Debug/net8.0
+/SmartEducation.Service/obj
