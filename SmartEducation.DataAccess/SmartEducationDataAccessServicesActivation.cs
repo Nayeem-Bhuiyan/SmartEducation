@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SmartEducation.Application.IEntityRepository.MasterPanel;
+using SmartEducation.Application.IEntityService.Auth;
 using SmartEducation.Application.IRepository;
 using SmartEducation.DataAccess.DBContext;
 using SmartEducation.DataAccess.EntityRepository.MasterPanel;

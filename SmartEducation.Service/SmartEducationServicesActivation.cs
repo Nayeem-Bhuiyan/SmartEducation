@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using SmartEducation.Application.IEntityService.Auth;
 using SmartEducation.Application.IEntityService.MasterPanel;
+using SmartEducation.Service.EntityService.Auth;
 using SmartEducation.Service.EntityService.MasterPanel;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ namespace SmartEducation.Service
         public static void AddSmartEducationServices(this IServiceCollection services)
         {
             services.AddTransient<ICountryService, CountryService>();
+            services.AddTransient<IApplicationUserService, ApplicationUserService>();
 
         }
     }

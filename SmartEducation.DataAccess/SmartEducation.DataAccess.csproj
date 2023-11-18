@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="EntityRepository\Account\" />
     <Folder Include="EntityRepository\Attendence\" />
+    <Folder Include="EntityRepository\Auth\" />
     <Folder Include="EntityRepository\Event\" />
     <Folder Include="EntityRepository\Exam\" />
     <Folder Include="EntityRepository\Guardian\" />

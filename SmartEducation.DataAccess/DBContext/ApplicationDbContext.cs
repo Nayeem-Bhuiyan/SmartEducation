@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using SmartEducation.Domain.Model.Auth;
 using SmartEducation.Domain.Model.MasterPanel;
 using System;
 using System.Collections.Generic;
@@ -9,12 +11,16 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.DataAccess.DBContext
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
     {
+        internal object tblName;
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
+           
         }
+
+
+
         public DbSet<Country> Country { get; set; }
 
         #region ViewModel_Data_Retrive
