@@ -13,7 +13,7 @@ namespace SmartEducation.DataAccess.DataAccessHelper
         /// </summary>
         /// <param name="exception"></param>
         /// <returns></returns>
-        public static string GetCatchException(Exception? exception)
+        public static string GetCatchException(Exception exception)
             => exception == null ? "Exception is NULL" : GetErrorMessage(exception);
 
         private static string GetErrorMessage(Exception exception)
