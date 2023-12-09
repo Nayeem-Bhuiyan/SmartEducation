@@ -142,7 +142,7 @@ namespace SmartEducation.Presentation.Areas.Auth.Controllers
                     UserName = model.Name,
                     isActive = true,
                     Email = model.Email,
-                    createdAt = DateTime.Now
+                    CreatedDate = DateTime.Now
                 };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

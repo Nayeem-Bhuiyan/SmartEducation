@@ -53,7 +53,7 @@ namespace SmartEducation.Service.EntityService.Auth
                                     UserName = a.UserName,
                                     Email = a.Email,
                                     roleName=r.Name,
-                                    createdAt =a.createdAt,
+                                    //createdAt =a.createdAt,
                                     isActive=a.isActive,
 
                                 }).ToListAsync();

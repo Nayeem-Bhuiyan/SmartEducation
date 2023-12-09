@@ -84,7 +84,7 @@ namespace SmartEducation.Presentation.Areas.Auth.Controllers
                     UserName = model.Email,
                     isActive = true,
                     Email = model.Email,
-                    createdAt = DateTime.Now,
+                    CreatedDate = DateTime.Now,
                     TwoFactorEnabled = false,
                     PhoneNumber = model.PhoneNumber,
                 };

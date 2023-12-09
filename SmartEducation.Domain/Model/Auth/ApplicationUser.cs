@@ -19,26 +19,18 @@ namespace SmartEducation.Domain.Model.Auth
         {
             get { return FirstName + " " + LastName; }
         }
+        public string Contact { get; set; }
+        public string Gender { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public string ProfilePicUrl { get; set; }
 
         [DefaultValue(true)]
         public bool? isActive { get; set; }
         public DateTime? LastLoginTime { get; set; }
         public bool IsLockedOut => LockoutEnabled && LockoutEnd >= DateTimeOffset.Now;
-
-
-
-
-        /// <summary>
-        /// Navigation property for the roles this user belongs to.
-        /// </summary>
-        public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }
-
-
-
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime UpdatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
     }
 }
