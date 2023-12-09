@@ -10,7 +10,7 @@ builder.WebHost.UseWebRoot(Path.Combine(Directory.GetCurrentDirectory(), "wwwroo
 builder.Logging.AddJsonConsole();
 #endregion
 
-#region ProjectCommonSetUp
+#region Project_Common_SetUp
 
 
 builder.Services.AddRazorPages();
@@ -21,7 +21,18 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
     options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 
-
+#region ConfigureApplicationCookie
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    // Cookie settings
+    options.Cookie.HttpOnly = true;
+    options.Cookie.Expiration = TimeSpan.FromDays(150);
+    options.LoginPath = "/Auth/UserAccount/Login"; // If the LoginPath is not set here, ASP.NET Core will default to /Account/Login
+    options.LogoutPath = "/Auth/UserAccount/Logout"; // If the LogoutPath is not set here, ASP.NET Core will default to /Account/Logout
+    options.AccessDeniedPath = "/Auth/UserAccount/AccessDenied"; // If the AccessDeniedPath is not set here, ASP.NET Core will default to /Account/AccessDenied
+    options.SlidingExpiration = true;
+});
+#endregion
 
 builder.Services.AddMvc().AddNewtonsoftJson(options =>
 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
@@ -52,6 +63,7 @@ builder.Services.AddMvc().AddRazorPagesOptions(options =>
 #endregion
 
 builder.Services.AddDistributedMemoryCache(); // Add a distributed memory cache
+//builder.Services.AddMemoryCache();
 
 #region AddSession
 builder.Services.AddSession(options =>
@@ -84,23 +96,8 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 #endregion
 
-#region MyRegion
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    // Cookie settings
-    options.Cookie.HttpOnly = true;
-    options.Cookie.Expiration = TimeSpan.FromDays(150);
-    options.LoginPath = "/Auth/UserAccount/Login"; // If the LoginPath is not set here, ASP.NET Core will default to /Account/Login
-    options.LogoutPath = "/Auth/UserAccount/Logout"; // If the LogoutPath is not set here, ASP.NET Core will default to /Account/Logout
-    options.AccessDeniedPath = "/Auth/UserAccount/AccessDenied"; // If the AccessDeniedPath is not set here, ASP.NET Core will default to /Account/AccessDenied
-    options.SlidingExpiration = true;
-});
-#endregion
-
-//builder.Services.AddMemoryCache();
+#region HttpContextAccessor
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
-
 #endregion
 
 #region Areas Config
@@ -119,10 +116,14 @@ builder.Services.Configure<RazorViewEngineOptions>(options =>
 
 #endregion
 
-//#region Config_CustomServices
+#endregion
+
+
+
+#region Config_CustomServices
 builder.Services.AddSmartEducationDataAccessServices(builder.Configuration);
 builder.Services.AddSmartEducationServices();
-//#endregion
+#endregion
 
 var app = builder.Build();
 
