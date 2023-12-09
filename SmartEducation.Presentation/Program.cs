@@ -38,6 +38,7 @@ builder.Services.AddMvc().AddRazorPagesOptions(options =>
     options.Conventions.AddAreaPageRoute("Identity", "/Auth/Authentication/Login", "");
 });
 
+#region FormOptions_MaxModelBindingCollectionSize
 //builder.Services.AddMvc(options =>
 //{
 //    options.MaxModelBindingCollectionSize = 100000;
@@ -48,8 +49,11 @@ builder.Services.AddMvc().AddRazorPagesOptions(options =>
 //    options.ValueLengthLimit = int.MaxValue;
 //    options.MultipartHeadersLengthLimit = int.MaxValue;
 //});
+#endregion
 
 builder.Services.AddDistributedMemoryCache(); // Add a distributed memory cache
+
+#region AddSession
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = ".MyApp.Session";
@@ -58,42 +62,40 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+#endregion
 
+#region IdentityOptions
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    options.Password.RequireDigit = true;
-    options.Password.RequiredLength = 8;
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 4;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
     options.Password.RequireLowercase = false;
 
     //Lockout settings
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
-    options.Lockout.MaxFailedAccessAttempts = 10;
-
-    //Cookie settings
-    //options..ApplicationCookie.ExpireTimeSpan = TimeSpan.FromDays(150);
-    //options.Cookies.ApplicationCookie.LoginPath = "/Account/Login";
-    //options.Cookies.ApplicationCookie.LogoutPath = "/Account/LogOut";
-
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
     //user settings
     options.User.RequireUniqueEmail = true;
 
 
 });
 
+#endregion
+
+#region MyRegion
 builder.Services.ConfigureApplicationCookie(options =>
 {
     // Cookie settings
     options.Cookie.HttpOnly = true;
     options.Cookie.Expiration = TimeSpan.FromDays(150);
-    options.LoginPath = "/Users/Login"; // If the LoginPath is not set here, ASP.NET Core will default to /Account/Login
-    options.LogoutPath = "/Users/Logout"; // If the LogoutPath is not set here, ASP.NET Core will default to /Account/Logout
-    options.AccessDeniedPath = "/Users/AccessDenied"; // If the AccessDeniedPath is not set here, ASP.NET Core will default to /Account/AccessDenied
+    options.LoginPath = "/Auth/UserAccount/Login"; // If the LoginPath is not set here, ASP.NET Core will default to /Account/Login
+    options.LogoutPath = "/Auth/UserAccount/Logout"; // If the LogoutPath is not set here, ASP.NET Core will default to /Account/Logout
+    options.AccessDeniedPath = "/Auth/UserAccount/AccessDenied"; // If the AccessDeniedPath is not set here, ASP.NET Core will default to /Account/AccessDenied
     options.SlidingExpiration = true;
 });
-
-
+#endregion
 
 //builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
