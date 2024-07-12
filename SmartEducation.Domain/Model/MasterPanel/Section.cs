@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Designation : BaseEntity
+    public class Section:BaseEntity
     {
-
         [Required]
-        public string designationName { get; set; }
+        public string sectionName { get; set; }
         public string code { get; set; }
-        public string shortName { get; set; }
 
         [ForeignKey("DepartmentId")]
         public int? DepartmentId { get; set; }
