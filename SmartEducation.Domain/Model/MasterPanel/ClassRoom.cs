@@ -7,16 +7,20 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class ClassRoom
+    public class ClassRoom:BaseEntity
     {
+        [ForeignKey("AccademicClassId")]
+        public int? AccademicClassId { get; set; }
+        public AccademicClass AccademicClass { get; set; }
 
-        [ForeignKey("BranchId")]
-        public int? BranchId { get; set; }
-        public Branch Branch { get; set; }
+        [ForeignKey("AccademicSectionId")]
+        public int? AccademicSectionId { get; set; }
+        public AccademicSection AccademicSection { get; set; }
 
-        public string buildingName { get; set; }
-        public string buildingPosition { get; set; }
-        public string roomNumber { get; set; }
+        [ForeignKey("BuildingRoomId")]
+        public int? BuildingRoomId { get; set; }
+        public BuildingRoom BuildingRoom { get; set; }
 
+        public string remarks { get; set; }
     }
 }

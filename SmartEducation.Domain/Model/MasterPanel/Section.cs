@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Section:BaseEntity
+    public class Section:BaseEntity  //this table is not for student data
     {
         [Required]
         public string sectionName { get; set; }
@@ -17,6 +17,5 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [ForeignKey("DepartmentId")]
         public int? DepartmentId { get; set; }
         public Department Department { get; set; }
-
     }
 }
