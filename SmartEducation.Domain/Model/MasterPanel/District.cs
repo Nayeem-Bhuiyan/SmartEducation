@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,12 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class District : BaseEntity
     {
         [Required]
-        public string districtCode { get; set; }
-        [Required]
         public string districtName { get; set; }
+        public string districtCode { get; set; }
         public string shortName { get; set; }
-        public int divisionId { get; set; }
-        public Division division { get; set; }
+
+        [ForeignKey("DivisionId")]
+        public int? DivisionId { get; set; }
+        public Division Division { get; set; }
     }
 }

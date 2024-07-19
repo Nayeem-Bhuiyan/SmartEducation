@@ -7,13 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\Attendence\**" />
+    <EmbeddedResource Remove="Model\Attendence\**" />
+    <None Remove="Model\Attendence\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interface\" />
     <Folder Include="Model\Account\" />
-    <Folder Include="Model\Attendence\" />
     <Folder Include="Model\Event\" />
     <Folder Include="Model\Exam\" />
-    <Folder Include="Model\Guardian\" />
-    <Folder Include="Model\Student\" />
-    <Folder Include="Model\Teacher\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -9,7 +9,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class Language:BaseEntity
     {
-        [StringLength(150, ErrorMessage = "Maximum length should be 150")]
+        [StringLength(150]
         public string languageName { get; set; }
         public string shortName { get; set; }
     }

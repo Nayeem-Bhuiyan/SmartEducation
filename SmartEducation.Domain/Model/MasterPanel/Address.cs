@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,27 +14,34 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public int? addressCategoryId { get; set; }
         public AddressCategory addressCategory { get; set; }
 
-        public int? countryId { get; set; }
-        public Country country { get; set; }
+        [ForeignKey("CountryId")]
+        public int? CountryId { get; set; }
+        public Country Country { get; set; }
 
-        public int? divisionId { get; set; }
-        public Division division { get; set; }
+        [ForeignKey("DivisionId")]
+        public int? DivisionId { get; set; }
+        public Division Division { get; set; }
 
-        public int? districtId { get; set; }
-        public District district { get; set; }
 
-        public int? thanaId { get; set; }
-        public Thana thana { get; set; }
+        [ForeignKey("DistrictId")]
+        public int? DistrictId { get; set; }
+        public District District { get; set; }
 
-        public string union { get; set; }
+        [ForeignKey("ThanaId")]
+        public int? ThanaId { get; set; }
+        public Thana Thana { get; set; }
 
-        public string postOffice { get; set; }
+        [ForeignKey("UnionId")]
+        public int? UnionId { get; set; }
+        public Union Union { get; set; }
 
-        public string postCode { get; set; }
+        [ForeignKey("PostOfficeId")]
+        public int? PostOfficeId { get; set; }
+        public PostOffice PostOffice { get; set; }
 
         public string blockSector { get; set; }
 
-        public string houseVillage { get; set; }
+        public string houseVillageName { get; set; }
 
         public string type { get; set; }  //Organization or Resourse or Company
     }

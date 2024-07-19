@@ -11,7 +11,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Section:BaseEntity  //this table is not for student data
     {
         [Required]
+        [StringLength(100)]
         public string sectionName { get; set; }
+        [StringLength(30)]
         public string code { get; set; }
 
         [ForeignKey("DepartmentId")]

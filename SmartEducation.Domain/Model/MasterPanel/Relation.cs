@@ -10,7 +10,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Relation : BaseEntity
     {
         [Required]
+        [StringLength(120)]
         public string relationName { get; set; }
+        [StringLength(30)]
         public string relationShortName { get; set; }
     }
 }

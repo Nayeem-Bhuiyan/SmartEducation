@@ -10,8 +10,10 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public class Subject : BaseEntity
         {
             [Required]
-            public string subjectName { get; set; }
-            public string subjectShortName { get; set; }
+        [StringLength(150)]
+        public string subjectName { get; set; }
+        [StringLength(50)]
+        public string subjectShortName { get; set; }
         }
     
 }

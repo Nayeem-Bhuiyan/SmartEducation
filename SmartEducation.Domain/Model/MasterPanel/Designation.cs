@@ -12,8 +12,11 @@ namespace SmartEducation.Domain.Model.MasterPanel
     {
 
         [Required]
+        [StringLength(120)]
         public string designationName { get; set; }
+        [StringLength(50)]
         public string code { get; set; }
+        [StringLength(50)]
         public string shortName { get; set; }
 
         [ForeignKey("DepartmentId")]

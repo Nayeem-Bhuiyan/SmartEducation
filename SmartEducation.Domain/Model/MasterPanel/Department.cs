@@ -12,8 +12,11 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Department : BaseEntity
     {
         [Required]
+        [StringLength(150)]
         public string deptName { get; set; }
+        [StringLength(30)]
         public string code { get; set; }
+        [StringLength(50)]
         public string shortName { get; set; }
 
         [ForeignKey("BranchId")]

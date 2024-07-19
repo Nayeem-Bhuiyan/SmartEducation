@@ -10,7 +10,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Occupation
     {
         [Required]
+        [StringLength(150)]
         public string occupationName { get; set; }
+        [StringLength(50)]
         public string occupationShortName { get; set; }
     }
 }

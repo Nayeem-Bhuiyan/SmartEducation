@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Branch
+    public class Branch:BaseAuditEntity
     {
         [Required]
         public string branchName { get; set; }
@@ -24,6 +24,10 @@ namespace SmartEducation.Domain.Model.MasterPanel
 
         [ForeignKey("AccademicInstitutionId")]
         public int AccademicInstitutionId { get; set; }
-        public AccademicInstitution AccademicInstitution { get; set; }
+        public AccademicInstitution AccademicInstitution { get; set; }      
+        
+        [ForeignKey("AccademicDivisionId")]
+        public int AccademicDivisionId { get; set; }
+        public AccademicDivision AccademicDivision { get; set; }
     }
 }

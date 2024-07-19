@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using SmartEducation.Domain.Interface;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -8,16 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartEducation.Domain.Model.Auth
+namespace SmartEducation.Domain.Model
 {
-    public class ApplicationRole : IdentityRole
+    public abstract class BaseAuditEntity
     {
-        public ApplicationRole() : base() { }
-        public ApplicationRole(string roleName) : base(roleName)
-        {
-        }
-        public string Description { get; set; }
-        public string IpAddress { get; set; }
+        public int Id { get; set; }
 
         #region Audit_Trail_Properties
         [StringLength(120)]
@@ -39,7 +32,5 @@ namespace SmartEducation.Domain.Model.Auth
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? deletedDate { get; set; }
         #endregion
-
-
     }
 }

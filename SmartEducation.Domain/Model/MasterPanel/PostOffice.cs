@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,15 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class PostOffice : BaseEntity
     {
         [Required]
-        public string postCode { get; set; }
-        [Required]
+        [StringLength(120)]
         public string postOfficeName { get; set; }
+        [StringLength(30)]
+        public string postCode { get; set; }
+       
 
-        public string thanaCode { get; set; }
+        [ForeignKey("ThanaId")]
+        public int? ThanaId { get; set; }
+        public Thana Thana { get; set; }
 
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string shortName { get; set; }
         public string eiinNumber { get; set; }
         public string code { get; set; }
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? establishDate { get; set; }
         public string location { get; set; }
         public string ownerName { get; set; }
@@ -23,7 +27,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string contactNumber { get; set; }
         public string email { get; set; }
         public string alternetEmail { get; set; }
-        public bool isMotherInstitution { get; set; }
+        [DefaultValue(false)]
+        public bool? isMotherInstitution { get; set; }
 
 
     }

@@ -8,12 +8,16 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Religion : BaseEntity
+    public class Union:BaseEntity
     {
         [Required]
-        [StringLength(50)]
-        public string name { get; set; }
-        [StringLength(30)]
-        public string shortName { get; set; }
+        public string unionName { get; set; }
+        public string unionCode { get; set; }
+
+
+        [ForeignKey("ThanaId")]
+        public int? ThanaId { get; set; }
+        public Thana Thana { get; set; }
+
     }
 }

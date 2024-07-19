@@ -10,6 +10,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class AddressType : BaseEntity
     {
         [Required]
+        [StringLength(100)]
         public string typeName { get; set; }
     }
 }
