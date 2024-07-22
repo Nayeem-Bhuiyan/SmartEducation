@@ -13,6 +13,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [MaxLength(250)]
         [StringLength(100)]
         public string name { get; set; }
+        public int? wordNo { get; set; }
 
         [ForeignKey("UnionId")]
         public int? UnionId { get; set; }

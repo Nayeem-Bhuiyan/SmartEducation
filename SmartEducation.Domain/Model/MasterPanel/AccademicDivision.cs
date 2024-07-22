@@ -11,14 +11,11 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class AccademicDivision: BaseAuditEntity
     {
-       public AccademicDivision() {
-            this.isActive = false;
-        }
         [Required]
         public string divisionName { get; set; }
         public string code { get; set; }
         [DefaultValue(false)]
-        public bool isActive { get; set; }
+        public bool isActive { get; set; } = false;
 
 
         [ForeignKey("AccademicInstitutionId")]
