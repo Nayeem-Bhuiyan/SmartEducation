@@ -12,19 +12,20 @@ namespace SmartEducation.Domain.Model.MasterPanel
     {
         [Required]
         public string holidayName { get; set; }
-        public bool? weeklyHoliday { get; set; }
+        [Required]
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
-        public DateTime? HolydayDate { get; set; }
-
+        public DateTime fromDate { get; set; }
+        [Required]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime toDate { get; set; }
 
         [Required]
-
         [ForeignKey("AccademicYearId")]
         public int AccademicYearId { get; set; }
         public AccademicYear AccademicYear { get; set; }     
         
-
         [ForeignKey("HolydayTypeId")]
         public int? HolydayTypeId { get; set; }
         public HolydayType HolydayType { get; set; }
