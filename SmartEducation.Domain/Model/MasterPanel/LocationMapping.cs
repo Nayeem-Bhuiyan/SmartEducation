@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class LocationType
+    public class LocationMapping:BaseEntity
     {
-        public string locationTypeName { get; set; }  //Citycoporation=C,Municipality=M,General=G
+        public string mappingAreaName { get; set; } //Citycoporation=C,Municipality=M,General=G  
     }
 }

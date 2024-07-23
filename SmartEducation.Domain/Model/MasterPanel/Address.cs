@@ -10,13 +10,13 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class Address:BaseEntity
     {
-        [ForeignKey("LocationTypeId")]
-        public int? LocationTypeId { get; set; }           //Present,Permanent
-        public LocationType LocationType { get; set; }
+        [ForeignKey("LocationMappingId")]
+        public int? LocationMappingId { get; set; }      //Citycoporation=C,Municipality=M,General=G     
+        public LocationMapping LocationMapping { get; set; }
 
 
         [ForeignKey("AddressTypeId")]
-        public int? AddressTypeId { get; set; }         //Citycoporation=C,Municipality=M,General=G
+        public int? AddressTypeId { get; set; }      //Present,Permanent
         public AddressType AddressType { get; set; }
 
 
@@ -37,22 +37,47 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public int? ThanaId { get; set; }
         public Thana Thana { get; set; }
 
+        #region Union_Word
         [ForeignKey("UnionId")]
         public int? UnionId { get; set; }
-        public Union Union { get; set; }  
-        
+        public Union Union { get; set; }
+
         [ForeignKey("WordId")]
         public int? WordId { get; set; }
         public Word Word { get; set; }
+        #endregion
+
+        #region CityCorporation_Counsil
+        [ForeignKey("CityCorporationId")]
+        public int? CityCorporationId { get; set; }
+        public CityCorporation CityCorporation { get; set; }
+
+        [ForeignKey("CityCorporationCounsilId")]
+        public int? CityCorporationCounsil { get; set; }
+        public CityCorporationCounsil CityCorporationCounsil { get; set; }
+        #endregion
+
+        #region Municipality_Counsil
+        [ForeignKey("MunicipalityId")]
+        public int? MunicipalityId { get; set; }
+        public Municipality Municipality { get; set; }
+
+        [ForeignKey("MunicipalityCounsilId")]
+        public int? MunicipalityCounsilId { get; set; }
+        public MunicipalityCounsil MunicipalityCounsil { get; set; }
+        #endregion
+
 
         [ForeignKey("PostOfficeId")]
         public int? PostOfficeId { get; set; }
         public PostOffice PostOffice { get; set; }
+
         [StringLength(50)]
         public string block_Sector { get; set; }
         [StringLength(120)]
+        public string streetNo { get; set; }
+        [StringLength(120)]
         public string house_Village { get; set; }
 
-        public string type { get; set; }  //Organization or Resourse or Company
     }
 }
