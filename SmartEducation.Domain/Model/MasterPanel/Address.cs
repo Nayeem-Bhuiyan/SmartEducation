@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Address
+    public class Address:BaseEntity
     {
+        [ForeignKey("AddressAreaTypeId")]
+        public int? AddressAreaTypeId { get; set; }           //Present,Permanent
+        public AddressAreaType AddressAreaType { get; set; }
+
 
         [ForeignKey("AddressTypeId")]
-        public int? AddressTypeId { get; set; }
+        public int? AddressTypeId { get; set; }         //Citycoporation=C,Municipality=M,General=G
         public AddressType AddressType { get; set; }
 
         [ForeignKey("CountryId")]
@@ -36,9 +40,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public int? UnionId { get; set; }
         public Union Union { get; set; }  
         
-        [ForeignKey("WordCounsilId")]
-        public int? WordCounsilId { get; set; }
-        public WordCounsil WordCounsil { get; set; }
+        [ForeignKey("WordId")]
+        public int? WordId { get; set; }
+        public Word Word { get; set; }
 
         [ForeignKey("PostOfficeId")]
         public int? PostOfficeId { get; set; }

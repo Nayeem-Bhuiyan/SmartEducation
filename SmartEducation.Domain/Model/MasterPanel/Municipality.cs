@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Municipality
+    public class Municipality:BaseEntity
     {
         [Required]
         [StringLength(150)]

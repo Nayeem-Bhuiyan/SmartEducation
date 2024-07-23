@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Word:BaseEntity
+    public class MunicipalityCounsil:BaseEntity
     {
         [Required]
         [StringLength(150)]
-        public string wordName { get; set; }
-        public int? wordNo { get; set; }
+        public string counsilName { get; set; }
+        public int? counsilNo { get; set; }
 
-        [ForeignKey("UnionId")]
-        public int? UnionId { get; set; }
-        public Union Union { get; set; }
+        [ForeignKey("MunicipalityId")]
+        public int? MunicipalityId { get; set; }
+        public Municipality Municipality { get; set; }
     }
 }
