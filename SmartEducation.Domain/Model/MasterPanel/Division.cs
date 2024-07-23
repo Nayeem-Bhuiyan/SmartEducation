@@ -11,11 +11,10 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Division : BaseEntity
     {
         [Required]
+        [StringLength(250)]
         public string divisionName { get; set; }
         [StringLength(50)]
         public string code { get; set; }
-        [StringLength(50)]
-        public string shortName { get; set; }
 
         [ForeignKey("CountryId")]
         public int? CountryId { get; set; }

@@ -12,7 +12,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [Required]
         [StringLength(120)]
         public string relationName { get; set; }
-        [StringLength(30)]
-        public string relationShortName { get; set; }
+
     }
 }

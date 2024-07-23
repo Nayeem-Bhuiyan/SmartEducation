@@ -13,7 +13,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [Required]
         [StringLength(120)]
         public string postOfficeName { get; set; }
-        [StringLength(30)]
+        [StringLength(50)]
         public string postCode { get; set; }
        
 

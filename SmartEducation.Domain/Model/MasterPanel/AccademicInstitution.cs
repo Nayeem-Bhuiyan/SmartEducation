@@ -43,6 +43,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string alternetEmail { get; set; }
         [DefaultValue(false)]
         public bool? isMotherInstitution { get; set; }=false;
+        [StringLength(100)]
+        public string reportSortingOrder { get; set; } //Designation,Grade etc
 
 
     }

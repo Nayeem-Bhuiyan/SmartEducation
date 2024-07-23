@@ -12,8 +12,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
     {
         [Required]
         [StringLength(50)]
-        public string name { get; set; }
-        [StringLength(30)]
-        public string shortName { get; set; }
+        public string religionName { get; set; }
     }
 }

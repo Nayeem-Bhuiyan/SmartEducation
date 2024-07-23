@@ -10,8 +10,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Gender:BaseEntity
     {
         [StringLength(120)]
-        public string genderName { get; set; }
+        public string genderName { get; set; } //Male,Female,Other
         [StringLength(30)]
-        public string shortName { get; set; }
+        public string shortName { get; set; } //M,F,O
     }
 }

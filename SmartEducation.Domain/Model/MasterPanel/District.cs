@@ -14,8 +14,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string districtName { get; set; }
         [StringLength(50)]
         public string code { get; set; }
-        [StringLength(50)]
-        public string shortName { get; set; }
 
         [ForeignKey("DivisionId")]
         public int? DivisionId { get; set; }

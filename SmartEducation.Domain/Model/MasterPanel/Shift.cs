@@ -28,7 +28,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [StringLength(50)]
         public string endTime { get; set; }
         [StringLength(30)]
-        public string shiftUsedFor { get; set; } //Student=S,Teacher=T,Staff=S,General etc
+        public string shiftUser { get; set; } //Student=S,Teacher=T,Staff=S,General etc
         public bool isActive { get; set; }
   
         

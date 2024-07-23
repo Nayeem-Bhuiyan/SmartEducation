@@ -13,9 +13,11 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [StringLength(150)]
         public string countryName { get; set; }
         [StringLength(50)]
-        public string countryCode { get; set; }
+        public string code { get; set; }
         [StringLength(50)]
-        public string shortName { get; set; }
+        public string shortName { get; set; }      
+        [StringLength(50)]
+        public string mobileDialingCode { get; set; } //For BD +880
 
     }
 }

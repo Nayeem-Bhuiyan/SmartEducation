@@ -21,6 +21,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [ForeignKey("BuildingRoomId")]
         public int? BuildingRoomId { get; set; }
         public BuildingRoom BuildingRoom { get; set; }
+
+
         [StringLength(150)]
         public string remarks { get; set; }
     }
