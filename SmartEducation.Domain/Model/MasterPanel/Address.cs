@@ -10,14 +10,15 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class Address:BaseEntity
     {
+        [ForeignKey("LocationTypeId")]
+        public int? LocationTypeId { get; set; }           //Present,Permanent
+        public LocationType LocationType { get; set; }
+
+
         [ForeignKey("AddressTypeId")]
         public int? AddressTypeId { get; set; }         //Citycoporation=C,Municipality=M,General=G
         public AddressType AddressType { get; set; }
 
-
-        [ForeignKey("AddressAreaTypeId")]
-        public int? AddressAreaTypeId { get; set; }           //Present,Permanent
-        public AddressAreaType AddressAreaType { get; set; }
 
         [ForeignKey("CountryId")]
         public int? CountryId { get; set; }
