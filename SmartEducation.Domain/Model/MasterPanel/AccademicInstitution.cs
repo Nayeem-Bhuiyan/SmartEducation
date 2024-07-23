@@ -10,25 +10,39 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class AccademicInstitution:BaseEntity
     {
-        public AccademicInstitution() {
-            this.isMotherInstitution=false;
-        }
+        [Required]
+        [StringLength(250)]
         public string fullName { get; set; }
-        public string displayName { get; set; }
+        [StringLength(80)]
         public string shortName { get; set; }
-        public string eiinNumber { get; set; }
+        [StringLength(250)]
+        public string displayName { get; set; }
+
+        [StringLength(50)]
         public string code { get; set; }
+        [StringLength(100)]
+        public string eiinNumber { get; set; }
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? establishDate { get; set; }
-        public string location { get; set; }
-        public string ownerName { get; set; }
+        [StringLength(250)]
+        public string address { get; set; }
+        [StringLength(500)]
+        public string founderNames { get; set; } //comma separated
+        [StringLength(500)]
+        public string presentOwnerNames { get; set; } //comma separated
+        [StringLength(250)]
         public string contactPerson { get; set; }
+        [StringLength(30)]
         public string contactNumber { get; set; }
+        [StringLength(30)]
+        public string alternetContactNumber { get; set; }
+        [StringLength(120)]
         public string email { get; set; }
+        [StringLength(120)]
         public string alternetEmail { get; set; }
         [DefaultValue(false)]
-        public bool? isMotherInstitution { get; set; }
+        public bool? isMotherInstitution { get; set; }=false;
 
 
     }
