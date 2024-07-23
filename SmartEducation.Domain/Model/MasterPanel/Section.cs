@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Section:BaseEntity  //this table is not for student data
+    public class Section: BaseEntity  //this table is not for student data (AccademicSection for student)
     {
         [Required]
         [StringLength(100)]

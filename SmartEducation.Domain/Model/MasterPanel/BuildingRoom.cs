@@ -14,6 +14,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public Building Building { get; set; }
 
         public int? floorNumber { get; set; }
-        public int? roomNumber { get; set; }
+        public string roomNumber { get; set; }    //roomNumber duplicate should be control by Building
     }
 }

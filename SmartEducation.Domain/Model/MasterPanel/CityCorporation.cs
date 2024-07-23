@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class AddressCategory : BaseEntity
+    public class CityCorporation:BaseEntity
     {
+        [Required]
         [StringLength(100)]
-        public string name { get; set; }
+        public string cityCorporationName { get; set; }
+        [StringLength(100)]
+        public string code { get; set; }
     }
 }

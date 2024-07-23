@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,11 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class Thana : BaseEntity
     {
-
-        public string thanaCode { get; set; }
+        [Required]
+        [StringLength(150)]
         public string thanaName { get; set; }
-        public string shortName { get; set; }
+        [StringLength(50)]
+        public string code { get; set; }
 
         [ForeignKey("DistrictId")]
         public int? DistrictId { get; set; }

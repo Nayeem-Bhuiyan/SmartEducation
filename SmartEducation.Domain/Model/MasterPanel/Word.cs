@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class WordCounsil:BaseEntity
+    public class Word
     {
-        [MaxLength(250)]
-        [StringLength(100)]
-        public string name { get; set; }
+        [Required]
+        [StringLength(150)]
+        public string wordName { get; set; }
         public int? wordNo { get; set; }
 
         [ForeignKey("UnionId")]

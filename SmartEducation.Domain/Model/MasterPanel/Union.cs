@@ -11,8 +11,10 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Union:BaseEntity
     {
         [Required]
+        [StringLength(150)]
         public string unionName { get; set; }
-        public string unionCode { get; set; }
+        [StringLength(50)]
+        public string code { get; set; }
 
 
         [ForeignKey("ThanaId")]

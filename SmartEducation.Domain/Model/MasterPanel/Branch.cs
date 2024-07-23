@@ -25,9 +25,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [ForeignKey("AccademicInstitutionId")]
         public int AccademicInstitutionId { get; set; }
         public AccademicInstitution AccademicInstitution { get; set; }      
-        
-        [ForeignKey("AccademicDivisionId")]
-        public int AccademicDivisionId { get; set; }
-        public AccademicDivision AccademicDivision { get; set; }
+
     }
 }

@@ -10,9 +10,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class Building:BaseEntity
     {
-        [ForeignKey("BranchId")]
-        public int? BranchId { get; set; }
-        public Branch Branch { get; set; }
+
         [StringLength(150)]
         public string buildingName { get; set; }
         [StringLength(50)]
@@ -20,5 +18,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [StringLength(100)]
         public string buildingType { get; set; } //Accademic,Administrative--etc
 
+
+        [ForeignKey("BranchId")]
+        public int? BranchId { get; set; }
+        public Branch Branch { get; set; }
     }
 }

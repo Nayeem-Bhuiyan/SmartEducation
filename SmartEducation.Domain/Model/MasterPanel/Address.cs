@@ -11,8 +11,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
     public class Address
     {
 
-        public int? addressCategoryId { get; set; }
-        public AddressCategory addressCategory { get; set; }
+        [ForeignKey("AddressTypeId")]
+        public int? AddressTypeId { get; set; }
+        public AddressType AddressType { get; set; }
 
         [ForeignKey("CountryId")]
         public int? CountryId { get; set; }
@@ -33,15 +34,19 @@ namespace SmartEducation.Domain.Model.MasterPanel
 
         [ForeignKey("UnionId")]
         public int? UnionId { get; set; }
-        public Union Union { get; set; }
+        public Union Union { get; set; }  
+        
+        [ForeignKey("WordCounsilId")]
+        public int? WordCounsilId { get; set; }
+        public WordCounsil WordCounsil { get; set; }
 
         [ForeignKey("PostOfficeId")]
         public int? PostOfficeId { get; set; }
         public PostOffice PostOffice { get; set; }
-
-        public string blockSector { get; set; }
-
-        public string houseVillageName { get; set; }
+        [StringLength(50)]
+        public string block_Sector { get; set; }
+        [StringLength(120)]
+        public string house_Village { get; set; }
 
         public string type { get; set; }  //Organization or Resourse or Company
     }

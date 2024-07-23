@@ -9,8 +9,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class Language:BaseEntity
     {
-        [StringLength(150]
+        [StringLength(150)]
         public string languageName { get; set; }
+        [StringLength(50)]
         public string shortName { get; set; }
     }
 }

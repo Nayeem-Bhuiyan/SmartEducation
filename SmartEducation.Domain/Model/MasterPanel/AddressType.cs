@@ -11,6 +11,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
     {
         [Required]
         [StringLength(100)]
-        public string typeName { get; set; }
+        public string typeName { get; set; } //Present,Permanent
     }
 }

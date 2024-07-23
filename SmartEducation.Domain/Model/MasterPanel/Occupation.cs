@@ -13,6 +13,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [StringLength(150)]
         public string occupationName { get; set; }
         [StringLength(50)]
-        public string occupationShortName { get; set; }
+        public string shortName { get; set; }
     }
 }

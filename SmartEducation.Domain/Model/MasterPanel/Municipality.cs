@@ -8,17 +8,19 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Division : BaseEntity
+    public class Municipality
     {
         [Required]
-        public string divisionName { get; set; }
+        [StringLength(150)]
+        public string municipalityName { get; set; }
+
         [StringLength(50)]
         public string code { get; set; }
-        [StringLength(50)]
-        public string shortName { get; set; }
+        [StringLength(150)]
+        public string address { get; set; }
 
-        [ForeignKey("CountryId")]
-        public int? CountryId { get; set; }
-        public Country Country { get; set; }
+        [ForeignKey("ThanaId")]
+        public int? ThanaId { get; set; }
+        public Thana Thana { get; set; }
     }
 }

@@ -23,5 +23,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? lockMonth { get; set; }
+
     }
 }

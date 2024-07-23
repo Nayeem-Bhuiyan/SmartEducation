@@ -22,9 +22,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string email { get; set; }
         
         //ForeignKey
-
         [ForeignKey("BankId")]
-        public int? BankId { get; set; }
+        public int BankId { get; set; }
         public Bank Bank { get; set; }
     }
 }

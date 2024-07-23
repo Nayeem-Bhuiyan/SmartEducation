@@ -13,7 +13,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
     {
         [Required]
         [StringLength(150)]
-        public string deptName { get; set; }
+        public string departmentName { get; set; }
         [StringLength(30)]
         public string code { get; set; }
         [StringLength(50)]
