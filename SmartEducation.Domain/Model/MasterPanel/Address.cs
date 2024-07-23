@@ -53,7 +53,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public CityCorporation CityCorporation { get; set; }
 
         [ForeignKey("CityCorporationCounsilId")]
-        public int? CityCorporationCounsil { get; set; }
+        public int? CityCorporationCounsilId { get; set; }
         public CityCorporationCounsil CityCorporationCounsil { get; set; }
         #endregion
 
@@ -66,7 +66,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public int? MunicipalityCounsilId { get; set; }
         public MunicipalityCounsil MunicipalityCounsil { get; set; }
         #endregion
-
 
         [ForeignKey("PostOfficeId")]
         public int? PostOfficeId { get; set; }
