@@ -28,7 +28,8 @@ namespace SmartEducation.Domain.Model.Student
         public string guardianName { get; set; }
         #endregion
 
-        #region Local_Guardian_Info  //lg=Local Guardian
+        #region Local_Guardian_Info  
+                                       //lg=Local Guardian
         [StringLength(150)]
         public string lgName { get; set; }
         [StringLength(250)]

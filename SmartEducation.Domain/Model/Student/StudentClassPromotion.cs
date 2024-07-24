@@ -55,5 +55,7 @@ namespace SmartEducation.Domain.Model.Student
         public int? NewMeritPosition { get; set; }
         [StringLength(150)]
         public string NewClassRoll { get; set; }
+
+        public string promotionType { get; set; } //Promotion,Demotion
     }
 }
