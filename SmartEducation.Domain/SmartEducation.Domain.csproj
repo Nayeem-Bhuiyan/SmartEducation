@@ -14,9 +14,6 @@
 
   <ItemGroup>
     <Folder Include="Interface\" />
-    <Folder Include="Model\Account\" />
-    <Folder Include="Model\Event\" />
-    <Folder Include="Model\Exam\" />
   </ItemGroup>
 
   <ItemGroup>
