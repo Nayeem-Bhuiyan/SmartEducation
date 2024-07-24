@@ -8,6 +8,7 @@ namespace SmartEducation.Domain.Model.Student
 {
     public class Student : BaseAuditEntity
     {
+        #region General_Information
         public string studentCode { get; set; }
         public string firstName { get; set; }
         public string middleName { get; set; }
@@ -15,6 +16,7 @@ namespace SmartEducation.Domain.Model.Student
         public string fatherName { get; set; }
         public string motherName { get; set; }
         public string guardianName { get; set; }
+        #endregion
 
         #region Local_Guardian_Info  //lg=Local Guardian
         public string lgName { get; set; }
@@ -25,6 +27,8 @@ namespace SmartEducation.Domain.Model.Student
         public string lgAge { get; set; }
         #endregion
 
+        #region Accademic_Information
 
+        #endregion
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SmartEducation.Domain.Model.MasterPanel
 {
     [Table("Department")]
-    public class Department : BaseEntity
+    public class Department :BaseAuditEntity
     {
         [Required]
         [StringLength(150)]

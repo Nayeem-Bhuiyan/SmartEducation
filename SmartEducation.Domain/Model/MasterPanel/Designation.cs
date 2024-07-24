@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Designation : BaseEntity
+    public class Designation : BaseAuditEntity
     {
 
         [Required]

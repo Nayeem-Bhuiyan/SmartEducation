@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class Building:BaseEntity
+    public class Building: BaseAuditEntity
     {
 
         [StringLength(150)]
