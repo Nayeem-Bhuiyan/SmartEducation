@@ -11,7 +11,7 @@ namespace SmartEducation.Domain.Model.Student
     public class Student : BaseAuditEntity
     {
         #region General_Information
-        public string studentCode { get; set; }
+        public string studentCode { get; set; } //Life Time School Identity
         public string firstName { get; set; }
         public string middleName { get; set; }
         public string lastName { get; set; }
@@ -30,9 +30,23 @@ namespace SmartEducation.Domain.Model.Student
         #endregion
 
         #region Accademic_Information
+        [ForeignKey("AccademicYearId")]
+        public int? AccademicYearId { get; set; }
+        public AccademicYear AccademicYear { get; set; }
+
+        public int? MeritPosition { get; set; }
+        public int? ClassRoll { get; set; }
+
         [ForeignKey("AccademicClassId")]
         public int? AccademicClassId { get; set; }
         public AccademicClass AccademicClass { get; set; }
+
+
+        [ForeignKey("AccademicSectionId")]
+        public int? AccademicSectionId { get; set; }
+        public AccademicSection AccademicSection { get; set; }
+
+
         #endregion
     }
 }
