@@ -20,7 +20,7 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string contact { get; set; }
         [StringLength(120)]
         public string email { get; set; }
-        
+
         //ForeignKey
         [ForeignKey("BankId")]
         public int BankId { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Teacher
 {
-    public class TeacherEvaluation
+    public class TeacherEvaluation:BaseAuditEntity
     {
     }
 }
