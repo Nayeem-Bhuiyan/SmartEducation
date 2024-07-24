@@ -26,10 +26,19 @@ namespace SmartEducation.Domain.Model.Student
         public string motherName { get; set; }
         [StringLength(150)]
         public string guardianName { get; set; }
+
+        [ForeignKey("GenderId")]
+        public int? GenderId { get; set; }
+        public Gender Gender { get; set; }
+
+        [ForeignKey("ReligionId")]
+        public int? ReligionId { get; set; }
+        public Religion Religion { get; set; }
+
         #endregion
 
         #region Local_Guardian_Info  
-                                       //lg=Local Guardian
+        //lg=Local Guardian
         [StringLength(150)]
         public string lgName { get; set; }
         [StringLength(250)]
@@ -60,7 +69,9 @@ namespace SmartEducation.Domain.Model.Student
         public int? AccademicSectionId { get; set; }
         public AccademicSection AccademicSection { get; set; }
 
-
+        [ForeignKey("ShiftId")]
+        public int? ShiftId { get; set; }
+        public Shift Shift { get; set; }
         #endregion
 
         #region Bank_Information

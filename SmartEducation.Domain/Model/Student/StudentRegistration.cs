@@ -26,6 +26,14 @@ namespace SmartEducation.Domain.Model.Student
         public string motherName { get; set; }
         [StringLength(150)]
         public string guardianName { get; set; }
+
+        [ForeignKey("GenderId")]
+        public int? GenderId { get; set; }
+        public Gender Gender { get; set; }
+
+        [ForeignKey("ReligionId")]
+        public int? ReligionId { get; set; }
+        public Religion Religion { get; set; }
         #endregion
 
         #region Local_Guardian_Info  
