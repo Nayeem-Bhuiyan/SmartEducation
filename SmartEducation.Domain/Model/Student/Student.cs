@@ -63,7 +63,7 @@ namespace SmartEducation.Domain.Model.Student
 
         #endregion
 
-        #region bank_Information
+        #region Bank_Information
         [ForeignKey("BankBranchId")]
         public int? BankBranchId { get; set; }
         public BankBranch BankBranch { get; set; }
