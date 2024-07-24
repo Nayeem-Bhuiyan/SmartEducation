@@ -53,6 +53,10 @@ namespace SmartEducation.Domain.Model.Student
         #endregion
 
         #region Accademic_Information
+        [ForeignKey("AccademicInstitutionId")]
+        public int? AccademicInstitutionId { get; set; }
+        public AccademicInstitution AccademicInstitution { get; set; }
+
         [ForeignKey("AccademicYearId")]
         public int? AccademicYearId { get; set; }
         public AccademicYear AccademicYear { get; set; }
@@ -71,7 +75,8 @@ namespace SmartEducation.Domain.Model.Student
 
         [ForeignKey("ShiftId")]
         public int? ShiftId { get; set; }
-        public Shift Shift { get; set; }
+        public Shift Shift { get; set; }      
+        
         #endregion
 
         #region Bank_Information

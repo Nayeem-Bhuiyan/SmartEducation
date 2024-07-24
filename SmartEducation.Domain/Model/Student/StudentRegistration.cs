@@ -56,18 +56,9 @@ namespace SmartEducation.Domain.Model.Student
         public int? AccademicYearId { get; set; }
         public AccademicYear AccademicYear { get; set; }
 
-        public int? MeritPosition { get; set; }
-        public string ClassRoll { get; set; }
-
         [ForeignKey("AccademicClassId")]
         public int? AccademicClassId { get; set; }
         public AccademicClass AccademicClass { get; set; }
-
-
-        [ForeignKey("AccademicSectionId")]
-        public int? AccademicSectionId { get; set; }
-        public AccademicSection AccademicSection { get; set; }
-
 
         #endregion
 
