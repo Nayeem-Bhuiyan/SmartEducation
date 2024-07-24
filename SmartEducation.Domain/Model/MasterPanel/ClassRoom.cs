@@ -10,9 +10,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
 {
     public class ClassRoom:BaseEntity
     {
-        [ForeignKey("AccademicClassId")]
-        public int? AccademicClassId { get; set; }
-        public AccademicClass AccademicClass { get; set; }
 
         [ForeignKey("AccademicSectionId")]
         public int? AccademicSectionId { get; set; }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SmartEducation.Domain.Model.MasterPanel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +30,9 @@ namespace SmartEducation.Domain.Model.Student
         #endregion
 
         #region Accademic_Information
-
+        [ForeignKey("AccademicClassId")]
+        public int? AccademicClassId { get; set; }
+        public AccademicClass AccademicClass { get; set; }
         #endregion
     }
 }
