@@ -47,5 +47,13 @@ namespace SmartEducation.Domain.Model.Student
         [ForeignKey("NewAccademicSectionId")]
         public int? NewAccademicSectionId { get; set; }
         public AccademicSection NewAccademicSection { get; set; }
+
+        public int? OldMeritPosition { get; set; }
+        [StringLength(150)]
+        public string OldClassRoll { get; set; }
+
+        public int? NewMeritPosition { get; set; }
+        [StringLength(150)]
+        public string NewClassRoll { get; set; }
     }
 }
