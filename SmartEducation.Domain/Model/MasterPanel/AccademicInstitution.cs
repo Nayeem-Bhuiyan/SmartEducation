@@ -27,6 +27,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public DateTime? establishDate { get; set; }
         [StringLength(250)]
         public string address { get; set; }
+        [StringLength(250)]
+        public string websiteUrl { get; set; }
         [StringLength(500)]
         public string founderNames { get; set; } //comma separated
         [StringLength(500)]
@@ -39,6 +41,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string alternetContactNumber { get; set; }
         [StringLength(120)]
         public string email { get; set; }
+        [StringLength(120)]
+        public string logoName { get; set; }
         [StringLength(120)]
         public string alternetEmail { get; set; }
         [DefaultValue(false)]

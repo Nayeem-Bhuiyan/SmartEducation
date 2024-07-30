@@ -1,19 +1,19 @@
 ﻿using SmartEducation.Domain.Model.MasterPanel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Student
 {
-    public class Student : BaseAuditEntity
+    public class StudentInfo:BaseAuditEntity
     {
         #region General_Information
         [StringLength(100)]
-        public string studentCode { get; set; } //Life Time School Identity
+        public string registrationNumber { get; set; } //Life Time School Identity
         [StringLength(150)]
         public string firstName { get; set; }
         [StringLength(150)]
@@ -26,6 +26,23 @@ namespace SmartEducation.Domain.Model.Student
         public string motherName { get; set; }
         [StringLength(150)]
         public string guardianName { get; set; }
+
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime? dateOfBirth { get; set; }
+
+        [StringLength(150)]
+        public string email { get; set; }
+        [StringLength(30)]
+        public string contact { get; set; }
+
+        [StringLength(400)]
+        public string pictureName { get; set; }
+
+        [StringLength(100)]
+        public string height { get; set; }
+        [StringLength(100)]
+        public string weight { get; set; }
 
         [ForeignKey("GenderId")]
         public int? GenderId { get; set; }
@@ -75,8 +92,8 @@ namespace SmartEducation.Domain.Model.Student
 
         [ForeignKey("ShiftId")]
         public int? ShiftId { get; set; }
-        public Shift Shift { get; set; }      
-        
+        public Shift Shift { get; set; }
+
         #endregion
 
         #region Bank_Information
@@ -86,7 +103,5 @@ namespace SmartEducation.Domain.Model.Student
         public string bankAccountNumber { get; set; }
 
         #endregion
-
-
     }
 }

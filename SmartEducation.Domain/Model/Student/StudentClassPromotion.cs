@@ -11,9 +11,9 @@ namespace SmartEducation.Domain.Model.Student
 {
     public class StudentClassPromotion:BaseAuditEntity
     {
-        [ForeignKey("StudentId")]
-        public int? StudentId { get; set; }
-        public Student Student { get; set; }
+        [ForeignKey("StudentInfoId")]
+        public int? StudentInfoId { get; set; }
+        public StudentInfo StudentInfo { get; set; }
 
         [ForeignKey("AccademicYearId")]
         public int? AccademicYearId { get; set; }

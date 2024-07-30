@@ -14,7 +14,9 @@ namespace SmartEducation.Domain.Model.MasterPanel
             public string subjectName { get; set; }
             [StringLength(50)]
             public string code { get; set; }
-
-        }
+            [StringLength(150)]
+            public string reportDisplayName { get; set; }
+            
+        }          
     
 }

@@ -9,26 +9,26 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Exam
 {
-    public class Exam:BaseEntity
+    public class ExamRoutine:BaseEntity
     {
-        [StringLength(150)]
-        public string examName { get; set; } //ClasTest1,ClassTest2
-        [StringLength(50)]
-        public string code { get; set; }
+        [ForeignKey("AccademicClassId")]
+        public int? AccademicClassId { get; set; }
+        public AccademicClass AccademicClass { get; set; }
 
         [ForeignKey("SubjectId")]
         public int? SubjectId { get; set; }
         public Subject Subject { get; set; }
 
-
-        [ForeignKey("ExamHeadId")]
-        public int? ExamHeadId { get; set; }
-        public ExamHead ExamHead { get; set; }
-
         [ForeignKey("ExamTypeId")]
         public int? ExamTypeId { get; set; }
         public ExamType ExamType { get; set; }
 
-        public int marks { get; set; }
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime? examDate { get; set; }
+
+        public string fromHour { get; set; }
+        public string toHour { get; set; }
+
     }
 }
