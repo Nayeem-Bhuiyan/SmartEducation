@@ -20,14 +20,13 @@ namespace SmartEducation.Domain.Model.Exam
         public int? SubjectId { get; set; }
         public Subject Subject { get; set; }
 
+        [ForeignKey("ExamTypeId")]
+        public int? ExamTypeId { get; set; }
+        public ExamType ExamType { get; set; }
 
         [ForeignKey("ExamHeadId")]
         public int? ExamHeadId { get; set; }
         public ExamHead ExamHead { get; set; }
-
-        [ForeignKey("ExamTypeId")]
-        public int? ExamTypeId { get; set; }
-        public ExamType ExamType { get; set; }
 
         public int marks { get; set; }
     }
