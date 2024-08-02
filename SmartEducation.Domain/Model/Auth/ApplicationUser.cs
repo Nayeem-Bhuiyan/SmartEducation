@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using SmartEducation.Domain.Interface;
+//using SmartEducation.Domain.Interface;
 
 namespace SmartEducation.Domain.Model.Auth
 {

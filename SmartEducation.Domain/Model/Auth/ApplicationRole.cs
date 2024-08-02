@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using SmartEducation.Domain.Interface;
+//using SmartEducation.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
