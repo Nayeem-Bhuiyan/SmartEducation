@@ -39,7 +39,7 @@ namespace SmartEducation.Domain.Model.Student
         public Thana Thana { get; set; }
 
         [ForeignKey("LocationMappingId")]
-        public int? LocationMappingId { get; set; }      //Citycoporation=C,Municipality=M,General=G     
+        public int? LocationMappingId { get; set; }      //Citycoporation=C,Municipality=M,Union=U     
         public LocationMapping LocationMapping { get; set; }
 
         #region Union_Word
@@ -72,9 +72,11 @@ namespace SmartEducation.Domain.Model.Student
         public MunicipalityCounsil MunicipalityCounsil { get; set; }
         #endregion
 
+        #region PostOffice
         [ForeignKey("PostOfficeId")]
         public int? PostOfficeId { get; set; }
         public PostOffice PostOffice { get; set; }
+        #endregion
 
         [StringLength(50)]
         public string block_Sector { get; set; }
