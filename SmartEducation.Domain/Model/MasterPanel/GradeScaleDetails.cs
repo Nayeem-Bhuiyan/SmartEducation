@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class GradeScaleDetails:BaseEntity
-    {
+    //public class GradeScaleDetails:BaseEntity
+    //{
 
-        [ForeignKey("GradeScaleId")]
-        public int? GradeScaleId { get; set; }
-        public GradeScale GradeScale { get; set; }
+    //    [ForeignKey("GradeScaleId")]
+    //    public int? GradeScaleId { get; set; }
+    //    public GradeScale GradeScale { get; set; }
 
-    }
+    //}
 }
