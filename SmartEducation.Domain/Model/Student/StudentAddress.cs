@@ -1,24 +1,25 @@
-﻿using System;
+﻿using SmartEducation.Domain.Model.MasterPanel;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartEducation.Domain.Model.MasterPanel
+namespace SmartEducation.Domain.Model.Student
 {
-    public class Address:BaseEntity
+    public class StudentAddress:BaseEntity
     {
-        [ForeignKey("LocationMappingId")]
-        public int? LocationMappingId { get; set; }      //Citycoporation=C,Municipality=M,General=G     
-        public LocationMapping LocationMapping { get; set; }
-
-
+       
+        
+        [ForeignKey("StudentInfoId")]
+        public int? StudentInfoId { get; set; }      
+        public StudentInfo StudentInfo { get; set; } 
+        
         [ForeignKey("AddressTypeId")]
         public int? AddressTypeId { get; set; }      //Present,Permanent
         public AddressType AddressType { get; set; }
-
 
         [ForeignKey("CountryId")]
         public int? CountryId { get; set; }
@@ -36,6 +37,10 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [ForeignKey("ThanaId")]
         public int? ThanaId { get; set; }
         public Thana Thana { get; set; }
+
+        [ForeignKey("LocationMappingId")]
+        public int? LocationMappingId { get; set; }      //Citycoporation=C,Municipality=M,General=G     
+        public LocationMapping LocationMapping { get; set; }
 
         #region Union_Word
         [ForeignKey("UnionId")]
@@ -77,6 +82,5 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public string streetNo { get; set; }
         [StringLength(120)]
         public string house_Village { get; set; }
-
     }
 }
