@@ -52,7 +52,12 @@ namespace SmartEducation.Domain.Model.Student
 
         [ForeignKey("ReligionId")]
         public int? ReligionId { get; set; }
-        public Religion Religion { get; set; }   
+        public Religion Religion { get; set; }
+
+        [ForeignKey("BloodGroupId")]
+        public int? BloodGroupId { get; set; }
+        public BloodGroup BloodGrop { get; set; }
+
         #endregion
 
         #region Local_Guardian_Info  

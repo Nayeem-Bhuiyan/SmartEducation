@@ -28,7 +28,11 @@ namespace SmartEducation.Domain.Model.Teacher
 
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
-        public DateTime? dateOfBirth { get; set; }
+        public DateTime? dateOfBirth { get; set; } 
+        
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime? joiningDate { get; set; }
 
         [StringLength(150)]
         public string email { get; set; }
@@ -48,6 +52,10 @@ namespace SmartEducation.Domain.Model.Teacher
         [ForeignKey("ReligionId")]
         public int? ReligionId { get; set; }
         public Religion Religion { get; set; }
+
+        [ForeignKey("BloodGroupId")]
+        public int? BloodGroupId { get; set; }
+        public BloodGroup BloodGrop { get; set; }
 
         [ForeignKey("ShiftId")]
         public int? ShiftId { get; set; }
@@ -71,6 +79,12 @@ namespace SmartEducation.Domain.Model.Teacher
         public MobileBank MobileBank { get; set; }
         [StringLength(50)]
         public string mobileBankAccountNumber { get; set; }
+        #endregion
+
+        #region Education
+        [ForeignKey("LastAchievedEducationId")]
+        public int? LastAchievedEducationId { get; set; }
+        public Education Education { get; set; }
         #endregion
     }
 }
