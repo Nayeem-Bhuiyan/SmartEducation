@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartEducation.Domain.Model.MasterPanel
+namespace SmartEducation.Domain.Model.Employee
 {
-    public class EmployeeType:BaseEntity
+    public class EmployeeType : BaseEntity
     {
         [StringLength(100)]
         public string employeeTypeName { get; set; } //Permanent,Contactual

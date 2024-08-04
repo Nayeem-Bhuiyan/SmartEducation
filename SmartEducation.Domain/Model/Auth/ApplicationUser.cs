@@ -6,7 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-//using SmartEducation.Domain.Interface;
+using SmartEducation.Domain.Model.MasterPanel;
+using System.ComponentModel.DataAnnotations.Schema;
+using SmartEducation.Domain.Model.Employee;
+
 
 namespace SmartEducation.Domain.Model.Auth
 {
@@ -53,6 +56,13 @@ namespace SmartEducation.Domain.Model.Auth
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? deletedDate { get; set; }
         #endregion
+       
+        [StringLength(50)]
+        public string UserType { get; set; } //Employee=E,Student=S,Guardian=G,Admin=A
+
+        [ForeignKey("EmployeeInfoId")]
+        public int? EmployeeInfoId { get; set; }
+        public EmployeeInfo EmployeeInfo { get; set; }
 
     }
 }

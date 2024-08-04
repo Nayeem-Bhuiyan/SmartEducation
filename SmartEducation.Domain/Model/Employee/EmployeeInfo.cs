@@ -45,6 +45,11 @@ namespace SmartEducation.Domain.Model.Employee
         [StringLength(100)]
         public string height { get; set; }
 
+
+
+        #endregion
+
+        #region General_Relational_Info
         [ForeignKey("GenderId")]
         public int? GenderId { get; set; }
         public Gender Gender { get; set; }
@@ -61,10 +66,58 @@ namespace SmartEducation.Domain.Model.Employee
         public int? ShiftId { get; set; }
         public Shift Shift { get; set; }
 
+        [ForeignKey("EmployeeTypeId")]
+        public int? EmployeeTypeId { get; set; }    //Contactual,Permanent
+        public EmployeeType EmployeeType { get; set; }
 
+        [ForeignKey("EmployeeCategoryId")]
+        public int EmployeeCategoryId { get; set; }   //Teacher,Staff,etc
+        public EmployeeCategory EmployeeCategory { get; set; }
+        #endregion
+
+        #region Transfer_Info
         [ForeignKey("InstitutionalDivisionId")]
         public int? InstitutionalDivisionId { get; set; }
         public InstitutionalDivision InstitutionalDivision { get; set; }
+
+        [ForeignKey("BranchId")]
+        public int? BranchId { get; set; }
+        public Branch Branch { get; set; }
+
+        [ForeignKey("DepartmentId")]
+        public int? DepartmentId { get; set; }
+        public Department Department { get; set; }
+
+        [ForeignKey("SectionId")]
+        public int? SectionId { get; set; }
+        public Section Section { get; set; }
+        #endregion
+
+        #region Promotion_Increment_Salary
+        [ForeignKey("DesignationId")]
+        public int DesignationId { get; set; }   
+        public Designation Designation { get; set; }
+
+        [ForeignKey("GradeScaleId")]
+        public int GradeScaleId { get; set; }
+        public GradeScale GradeScale { get; set; }   
+        
+        [ForeignKey("SalaryTypeId")]
+        public int SalaryTypeId { get; set; }  //Consolidated=C,Regular=R
+        public SalaryType SalaryType { get; set; } 
+
+        public decimal basicSalary { get; set; }
+        public decimal grossSalary { get; set; }
+        #endregion
+
+        #region Confirmation
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime? tentativeConfirmationDate { get; set; }
+        
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime? confirmationDate { get; set; }
         #endregion
 
         #region Bank_Information

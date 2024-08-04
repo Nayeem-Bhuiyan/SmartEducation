@@ -1,5 +1,4 @@
 ﻿using SmartEducation.Domain.Model.MasterPanel;
-using SmartEducation.Domain.Model.Teacher;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
