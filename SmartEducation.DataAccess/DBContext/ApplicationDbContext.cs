@@ -5,6 +5,7 @@ using SmartEducation.Domain.Model.Employee;
 using SmartEducation.Domain.Model.Exam;
 using SmartEducation.Domain.Model.Guardian;
 using SmartEducation.Domain.Model.MasterPanel;
+using SmartEducation.Domain.Model.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace SmartEducation.DataAccess.DBContext
         {
            
         }
+
         #region Account
          //public DbSet<Country> Country { get; set; }
         #endregion
@@ -64,18 +66,57 @@ namespace SmartEducation.DataAccess.DBContext
         public DbSet<AddressType> AddressType { get; set; }
         public DbSet<Bank> Bank { get; set; }
         public DbSet<BankBranch> BankBranch { get; set; }
-        public DbSet<BankBranch> BankBranch { get; set; }
+        public DbSet<BankType> BankType { get; set; }
+        public DbSet<BloodGroup> BloodGroup { get; set; }
+        public DbSet<Branch> Branch { get; set; }
+        public DbSet<BranchIncharge> BranchIncharge { get; set; }
+        public DbSet<Building> Building { get; set; }
+        public DbSet<BuildingRoom> BuildingRoom { get; set; }
+        public DbSet<CityCorporation> CityCorporation { get; set; }
+        public DbSet<CityCorporationCounsil> CityCorporationCounsil { get; set; }
+        public DbSet<ClassRoom> ClassRoom { get; set; }
+        public DbSet<Country> Country { get; set; }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Designation> Designation { get; set; }
+        public DbSet<District> District { get; set; }
+        public DbSet<Division> Division { get; set; }
+        public DbSet<Education> Education { get; set; }
+        public DbSet<EducationLevel> EducationLevel { get; set; }
+        public DbSet<EmailConfiguration> EmailConfiguration { get; set; }
+        public DbSet<Gender> Gender { get; set; }
+        public DbSet<GeneralConfiguration> GeneralConfiguration { get; set; }
+        public DbSet<GradeScale> GradeScale { get; set; }
+        //public DbSet<GradeScaleDetails> GradeScaleDetails { get; set; }
+        public DbSet<Holiday> Holiday { get; set; }
+        public DbSet<HolydayType> HolydayType { get; set; }
+        public DbSet<Institution> Institution { get; set; }
+        public DbSet<InstitutionalDivision> InstitutionalDivision { get; set; }
+        public DbSet<Language> Language { get; set; }
+        public DbSet<LocationMapping> LocationMapping { get; set; }
+        public DbSet<MobileBank> MobileBank { get; set; }
+        public DbSet<Municipality> Municipality { get; set; }
+        public DbSet<MunicipalityCounsil> MunicipalityCounsil { get; set; }
+        public DbSet<Occupation> Occupation { get; set; }
+        public DbSet<Relation> Relation { get; set; }
+        public DbSet<Religion> Religion { get; set; }
+        public DbSet<SalaryType> SalaryType { get; set; }
+        public DbSet<Section> Section { get; set; }
+        public DbSet<Shift> Shift { get; set; }
+        public DbSet<Subject> Subject { get; set; }
+        public DbSet<SubjectDetails> SubjectDetails { get; set; }
+        public DbSet<Thana> Thana { get; set; }
+        public DbSet<Union> Union { get; set; }
+        public DbSet<Word> Word { get; set; }
         #endregion
+
         #region Student
-        //public DbSet<Country> Country { get; set; }
+        public DbSet<StudentAddress> StudentAddress { get; set; }
+        public DbSet<StudentClassPromotion> StudentClassPromotion { get; set; }
+        public DbSet<StudentInfo> StudentInfo { get; set; }
+        public DbSet<StudentRegistration> StudentRegistration { get; set; }
         #endregion
+
         #region Teacher
-
-
-
-
-
-
 
 
 
