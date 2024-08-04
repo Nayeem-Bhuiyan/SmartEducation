@@ -7,19 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartEducation.Domain.Model.Student
+namespace SmartEducation.Domain.Model.Teacher
 {
-    public class StudentInfo:BaseAuditEntity
+    public class TeacherInfo : BaseAuditEntity
     {
         #region General_Information
         [StringLength(100)]
-        public string registrationNumber { get; set; } //Life Time School Identity
-        [StringLength(150)]
-        public string firstName { get; set; }
-        [StringLength(150)]
-        public string middleName { get; set; }
-        [StringLength(150)]
-        public string lastName { get; set; }
+        public string teacherCode { get; set; } //Life Time School Identity
+        [StringLength(250)]
+        public string teacherName { get; set; }
+
         [StringLength(150)]
         public string fatherName { get; set; }
         [StringLength(150)]
@@ -43,8 +40,6 @@ namespace SmartEducation.Domain.Model.Student
 
         [StringLength(100)]
         public string height { get; set; }
-        [StringLength(100)]
-        public string weight { get; set; }
 
         [ForeignKey("GenderId")]
         public int? GenderId { get; set; }
@@ -52,57 +47,24 @@ namespace SmartEducation.Domain.Model.Student
 
         [ForeignKey("ReligionId")]
         public int? ReligionId { get; set; }
-        public Religion Religion { get; set; }   
-        #endregion
-
-        #region Local_Guardian_Info  
-        //lg=Local Guardian
-        [StringLength(150)]
-        public string lgName { get; set; }
-        [StringLength(250)]
-        public string lgAddress { get; set; }
-        [StringLength(30)]
-        public string lgContact { get; set; }
-        [StringLength(150)]
-        public string lgEmail { get; set; }
-        [StringLength(150)]
-        public string lgOccupation { get; set; }
-        public int? lgAge { get; set; }
-        #endregion
-
-        #region Accademic_Information
-        [ForeignKey("InstitutionalDivisionId")]
-        public int? InstitutionalDivisionId { get; set; }
-        public InstitutionalDivision InstitutionalDivision { get; set; }
-
-        [ForeignKey("AccademicYearId")]
-        public int? AccademicYearId { get; set; }
-        public AccademicYear AccademicYear { get; set; }
-
-        public int? MeritPosition { get; set; }
-        public string ClassRoll { get; set; }
-
-        [ForeignKey("AccademicClassId")]
-        public int? AccademicClassId { get; set; }
-        public AccademicClass AccademicClass { get; set; }
-
-
-        [ForeignKey("AccademicSectionId")]
-        public int? AccademicSectionId { get; set; }
-        public AccademicSection AccademicSection { get; set; }
+        public Religion Religion { get; set; }
 
         [ForeignKey("ShiftId")]
         public int? ShiftId { get; set; }
         public Shift Shift { get; set; }
 
+
+        [ForeignKey("InstitutionalDivisionId")]
+        public int? InstitutionalDivisionId { get; set; }
+        public InstitutionalDivision InstitutionalDivision { get; set; }
         #endregion
 
         #region Bank_Information
         [ForeignKey("BankBranchId")]
         public int? BankBranchId { get; set; }
         public BankBranch BankBranch { get; set; }
+        [StringLength(150)]
         public string bankAccountNumber { get; set; }
-
 
         [ForeignKey("MobileBankId")]
         public int? MobileBankId { get; set; }

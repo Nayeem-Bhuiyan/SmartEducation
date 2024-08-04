@@ -31,8 +31,8 @@ namespace SmartEducation.Domain.Model.MasterPanel
         public HolydayType HolydayType { get; set; }
 
 
-        [ForeignKey("AccademicInstitutionId")]
-        public int? AccademicInstitutionId { get; set; }
-        public AccademicInstitution AccademicInstitution { get; set; }
+        [ForeignKey("InstitutionalDivisionId")]
+        public int? InstitutionalDivisionId { get; set; }
+        public InstitutionalDivision InstitutionalDivision { get; set; }
     }
 }

@@ -8,5 +8,6 @@ namespace SmartEducation.Domain.Model.Teacher
 {
     public class TeacherEvaluation:BaseAuditEntity
     {
+
     }
 }

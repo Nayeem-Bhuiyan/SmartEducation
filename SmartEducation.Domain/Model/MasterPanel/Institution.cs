@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-    public class AccademicInstitution:BaseEntity
+    public class Institution:BaseAuditEntity
     {
         [Required]
         [StringLength(250)]
@@ -46,10 +46,10 @@ namespace SmartEducation.Domain.Model.MasterPanel
         [StringLength(120)]
         public string alternetEmail { get; set; }
         [DefaultValue(false)]
-        public bool? isMotherInstitution { get; set; }=false;
+        public bool? isMotherInstitution { get; set; } = false;
         [StringLength(100)]
         public string reportSortingOrder { get; set; } //Designation,Grade etc
-
-
+        [StringLength(1000)]
+        public string baseUrl { get; set; } //Designation,Grade etc
     }
 }
