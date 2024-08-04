@@ -116,7 +116,7 @@ namespace SmartEducation.DataAccess.DBContext
         public DbSet<StudentRegistration> StudentRegistration { get; set; }
         #endregion
 
-        #region Teacher
+
 
 
 
@@ -140,16 +140,19 @@ namespace SmartEducation.DataAccess.DBContext
             //modelBuilder.Entity<VmStudent>().HasNoKey();
 
             #region SEED_DATA
+
             #region SalaryType
             modelBuilder.Entity<SalaryType>().HasData(new List<SalaryType>
             {
                 new SalaryType // 1
                 {
+                    Id=1,
                     salaryTypeName = "Consolidated",
                     shortName="C"
                 },
                new SalaryType // 1
                 {
+                    Id=2,
                     salaryTypeName = "Regular",
                     shortName="R"
                 }
@@ -161,11 +164,13 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new Language // 1
                 {
+                    Id=1,
                     languageName = "English",
                     shortName="ENG"
                 },
                new Language // 1
                 {
+                   Id=2,
                     languageName = "Bangla",
                     shortName="BAN"
                 }
@@ -177,17 +182,20 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new MobileBank
                 {
+                    Id=1,
                     bankName = "Bikash",
                     shortName="BK"
                 },
                new MobileBank
                 {
+                   Id=2,
                     bankName = "Nagad",
                     shortName="ND"
                 }
                ,
                new MobileBank
                {
+                   Id=3,
                    bankName = "Rocket",
                    shortName="RKT"
                }
@@ -199,36 +207,43 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new EducationLevel
                 {
+                    Id=1,
                     educationLevelName = "Primary",
                     code="P101"
                 },
                 new EducationLevel
                 {
+                    Id=2,
                     educationLevelName = "Secondary",
                     code="S201"
                 },
                 new EducationLevel
                 {
+                    Id=3,
                     educationLevelName = "Higher Secondary",
                     code="HS301"
                 },
                  new EducationLevel
                 {
+                     Id=4,
                     educationLevelName = "Under-graduate",
                     code="UG401"
                 },
                   new EducationLevel
                 {
+                      Id=5,
                     educationLevelName = "Post-graduate",
                     code="PG501"
                 },
                   new EducationLevel
                 {
+                      Id=6,
                     educationLevelName = "Dimploma",
                     code="D101"
                 },
                 new EducationLevel
                 {
+                    Id=7,
                     educationLevelName = "Post-Graduate Dimploma",
                     code="PGD201"
                 },
@@ -240,16 +255,19 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new Gender
                 {
+                    Id=1,
                     genderName = "Male",
                     shortName="M"
                 },
                 new Gender
                 {
+                    Id=2,
                     genderName = "Female",
                     shortName="Fe"
                 },
                 new Gender
                 {
+                    Id=3,
                     genderName = "Third-Gender",
                     shortName="TG"
                 }
@@ -261,22 +279,26 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new HolydayType
                 {
+                    Id=1,
                     name = "Govt"
                 },
                new HolydayType
                 {
+                   Id=2,
                     name = "Eid"
                 },
                new HolydayType
-                {
-                    name = "Puza"
+                {Id=3,
+                   name = "Puza"
                 },
                new HolydayType
                 {
+                   Id=4,
                     name = "Weekly"
-                }, 
+                },
                 new HolydayType
                 {
+                    Id=5,
                     name = "Others"
                 },
             });
@@ -287,59 +309,69 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new AccademicClass // 1
                 {
+                    Id=1,
                     className = "One"
                 },
                new AccademicClass // 1
                 {
+                   Id=2,
                     className = "Two",
                 },
                new AccademicClass // 1
-                {
+                {Id = 3,
                     className = "Three",
                 }
                ,
                new AccademicClass // 1
-                {
+                {Id = 4,
                     className = "Four",
                 }
                ,
                new AccademicClass // 1
                 {
+                   Id=5,
                     className = "Five",
                 }
                ,
                new AccademicClass // 1
                 {
+                   Id=6,
                     className = "Six",
                 }
                ,
                new AccademicClass // 1
                 {
+                   Id=7,
                     className = "Seven",
                 }
                ,
                new AccademicClass // 1
                 {
+                   Id=8,
                     className = "Eight",
                 }
                ,
                new AccademicClass // 1
                 {
+                   Id=9,
                     className = "Nine",
                 }
                ,
                new AccademicClass // 1
                 {
+                   Id=10,
                     className = "Ten",
                 }
                ,
                new AccademicClass // 1
                 {
+                   Id=11,
                     className = "Eleven",
                 }
                ,
                new AccademicClass // 1
                 {
+                    Id=12,
                     className = "Twelve",
                 }
             });
@@ -350,10 +382,12 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new AddressType // 1
                 {
+                    Id=1,
                     typeName = "Present"
                 },
                  new AddressType // 1
                 {
+                     Id=2,
                     typeName = "Permanent"
                 }
             });
@@ -362,36 +396,43 @@ namespace SmartEducation.DataAccess.DBContext
             #region BloodGroup
             modelBuilder.Entity<BloodGroup>().HasData(new List<BloodGroup>
             {
-                new BloodGroup 
+                new BloodGroup
                 {
+                    Id=1,
                     bloodGroupName = "A+"
                 },
-                 new BloodGroup 
-                {
+                 new BloodGroup
+                {Id=2,
                     bloodGroupName = "A-"
                 },
-                 new BloodGroup 
+                 new BloodGroup
                 {
+                     Id=3,
                     bloodGroupName = "B+"
                 },
-                 new BloodGroup 
+                 new BloodGroup
                 {
+                     Id=4,
                     bloodGroupName = "B-"
                 },
-                 new BloodGroup 
+                 new BloodGroup
                 {
+                     Id=5,
                     bloodGroupName = "O+"
                 },
-                 new BloodGroup 
+                 new BloodGroup
                 {
+                     Id=6,
                     bloodGroupName = "O-"
-                }
-                 new BloodGroup 
+                },
+                 new BloodGroup
                 {
+                     Id=7,
                     bloodGroupName = "AB+"
                 },
                  new BloodGroup
                 {
+                     Id=8,
                     bloodGroupName = "AB-"
                 }
             });
@@ -402,38 +443,45 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new Relation
                 {
+                    Id=1,
                     relationName = "Father"
                 },
                  new Relation
-                {
+                {Id = 2,
                     relationName = "Mother"
                 },
                  new Relation
                 {
+                     Id=3,
                     relationName = "Brother"
                 },
                  new Relation
                 {
+                     Id=4,
                     relationName = "Sister"
                 }
                  ,
                  new Relation
                 {
+                     Id=5,
                     relationName = "Uncle"
                 }
                  ,
                  new Relation
                 {
+                     Id=6,
                     relationName = "Aunty"
                 }
                  ,
                  new Relation
                 {
+                     Id=7,
                     relationName = "Grand-Father"
                 }
                  ,
                  new Relation
                 {
+                     Id=8,
                     relationName = "Grand-Mother"
                 }
             });
@@ -445,18 +493,22 @@ namespace SmartEducation.DataAccess.DBContext
             {
                 new Religion
                 {
+                    Id=1,
                     religionName = "Islam"
                 },
                  new Religion
                 {
+                     Id=2,
                     religionName = "Hindu"
                 },
                  new Religion
                 {
+                     Id=3,
                     religionName = "Christian"
                 },
                  new Religion
                 {
+                     Id=4,
                     religionName = "Buddist"
                 }
             });

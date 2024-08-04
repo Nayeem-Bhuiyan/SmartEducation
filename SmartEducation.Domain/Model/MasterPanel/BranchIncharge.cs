@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SmartEducation.Domain.Model.MasterPanel
 {
     [Table("BranchIncharge")]
-    public class BranchIncharge
+    public class BranchIncharge : BaseEntity
     {
         [StringLength(150)]
         public string name { get; set; }

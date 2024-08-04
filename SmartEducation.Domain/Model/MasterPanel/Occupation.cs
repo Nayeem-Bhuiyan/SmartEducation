@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SmartEducation.Domain.Model.MasterPanel
 {
     [Table("Occupation")]
-    public class Occupation
+    public class Occupation : BaseEntity
     {
         [Required]
         [StringLength(150)]

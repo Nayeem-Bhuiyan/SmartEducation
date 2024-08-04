@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SmartEducation.Domain.Model.MasterPanel
 {
     [Table("AccademicYear")]
-    public class AccademicYear
+    public class AccademicYear:BaseEntity
     {
         [StringLength(100)]
         public string yearCaption { get; set; }
