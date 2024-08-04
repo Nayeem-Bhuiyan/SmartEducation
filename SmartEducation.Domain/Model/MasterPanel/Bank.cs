@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("Bank")]
     public class Bank:BaseEntity
     {
         [StringLength(100)]

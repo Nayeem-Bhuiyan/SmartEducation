@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Exam
 {
+    [Table("ExamMarks")]
     public class ExamMarks:BaseEntity
     {
         [ForeignKey("StudentInfoId")]

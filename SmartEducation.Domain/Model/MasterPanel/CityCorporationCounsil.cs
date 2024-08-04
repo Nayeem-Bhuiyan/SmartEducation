@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("CityCorporationCounsil")]
     public class CityCorporationCounsil:BaseEntity
     {
         [Required]

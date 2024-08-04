@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("GeneralConfiguration")]
     public class GeneralConfiguration : BaseEntity
     {
         [StringLength(120)]

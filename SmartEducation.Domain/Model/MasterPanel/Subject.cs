@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
-        public class Subject : BaseEntity
+    [Table("Subject")]
+    public class Subject : BaseEntity
         {
             [Required]
             [StringLength(150)]

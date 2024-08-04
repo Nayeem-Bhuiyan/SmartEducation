@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("Shift")]
     public class Shift:BaseEntity
     {
         public Shift() {

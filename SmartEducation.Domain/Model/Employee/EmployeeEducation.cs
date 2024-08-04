@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Employee
 {
+    [Table("EmployeeEducation")]
     public class EmployeeEducation:BaseEntity
     {
         [ForeignKey("EmployeeInfoId")]

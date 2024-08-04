@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Employee
 {
+    [Table("EmployeeAddress")]
     public class EmployeeAddress:BaseEntity
     {
         [ForeignKey("EmployeeInfoId")]

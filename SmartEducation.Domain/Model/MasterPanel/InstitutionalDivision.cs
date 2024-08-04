@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("InstitutionalDivision")]
     public class InstitutionalDivision:BaseAuditEntity
     {
         [Required]

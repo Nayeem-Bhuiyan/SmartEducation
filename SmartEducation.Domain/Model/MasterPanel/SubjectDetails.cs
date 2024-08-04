@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("SubjectDetails")]
     public class SubjectDetails:BaseEntity
     {
         [ForeignKey("SubjectId")]

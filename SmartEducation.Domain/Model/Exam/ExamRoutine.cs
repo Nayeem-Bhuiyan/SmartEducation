@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Exam
 {
+    [Table("ExamRoutine")]
     public class ExamRoutine:BaseEntity
     {
         [ForeignKey("AccademicClassId")]

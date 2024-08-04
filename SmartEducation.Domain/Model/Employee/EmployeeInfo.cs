@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Employee
 {
+    [Table("EmployeeInfo")]
     public class EmployeeInfo:BaseAuditEntity
     {
         #region General_Information

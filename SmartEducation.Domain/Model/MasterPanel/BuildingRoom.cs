@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("BuildingRoom")]
     public class BuildingRoom:BaseEntity
     {
         public int? floorNumber { get; set; }

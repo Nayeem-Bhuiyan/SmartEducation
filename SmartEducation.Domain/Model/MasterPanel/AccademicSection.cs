@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("AccademicSection")]
     public class AccademicSection:BaseEntity
     {
         public string accademicSectionName { get; set; }

@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("Religion")]
     public class Religion : BaseEntity
     {
         [Required]
         [StringLength(50)]
-        public string religionName { get; set; }
+        public string religionName { get; set; } //Islam,Hindu,Christian,Buddist
     }
 }

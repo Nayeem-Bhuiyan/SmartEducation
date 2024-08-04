@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    [Table("PostOffice")]
     public class PostOffice : BaseEntity
     {
         [Required]

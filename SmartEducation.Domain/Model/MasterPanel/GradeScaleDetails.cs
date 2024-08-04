@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.MasterPanel
 {
+    //[Table("GradeScaleDetails")]
     //public class GradeScaleDetails:BaseEntity
     //{
 

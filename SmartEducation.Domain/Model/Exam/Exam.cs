@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Exam
 {
+    [Table("Exam")]
     public class Exam:BaseEntity
     {
         [StringLength(150)]
