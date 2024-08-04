@@ -79,7 +79,11 @@ namespace SmartEducation.Domain.Model.Student
         #endregion
 
         [StringLength(50)]
-        public string block_Sector { get; set; }
+        public string Sector { get; set; }    
+        
+        [StringLength(50)]
+        public string block { get; set; }
+
         [StringLength(120)]
         public string streetNo { get; set; }
         [StringLength(120)]
