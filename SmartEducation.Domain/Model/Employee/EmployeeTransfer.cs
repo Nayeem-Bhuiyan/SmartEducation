@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Employee
 {
-    public class EmployeeTransfer:BaseAuditEntity
-    {
-    }
+    //public class EmployeeTransfer:BaseAuditEntity
+    //{
+    //}
 }

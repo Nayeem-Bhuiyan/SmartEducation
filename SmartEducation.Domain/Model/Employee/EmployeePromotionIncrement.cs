@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartEducation.Domain.Model.Employee
 {
-    public class EmployeePromotionIncrement:BaseAuditEntity
-    {
-    }
+    //public class EmployeePromotionIncrement:BaseAuditEntity
+    //{
+    //}
 }
