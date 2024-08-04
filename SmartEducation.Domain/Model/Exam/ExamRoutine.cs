@@ -26,12 +26,10 @@ namespace SmartEducation.Domain.Model.Exam
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime? examDate { get; set; }
-        
-        [DataType(DataType.DateTime)]
-        public DateTime? fromHour { get; set; }
-        
-        [DataType(DataType.DateTime)]
-        public DateTime? toHour { get; set; }
+        [StringLength(50)]
+        public string fromHour { get; set; }
+        [StringLength(50)]
+        public string toHour { get; set; }
 
     }
 }

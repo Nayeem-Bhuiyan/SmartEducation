@@ -25,7 +25,9 @@ namespace SmartEducation.Domain.Model.Student
         [StringLength(150)]
         public string motherName { get; set; }
         [StringLength(150)]
-        public string guardianName { get; set; }
+        public string fatherOccupation { get; set; }
+        [StringLength(150)]
+        public string motherOccupation { get; set; }
 
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
@@ -50,8 +52,7 @@ namespace SmartEducation.Domain.Model.Student
 
         [ForeignKey("ReligionId")]
         public int? ReligionId { get; set; }
-        public Religion Religion { get; set; }
-
+        public Religion Religion { get; set; }   
         #endregion
 
         #region Local_Guardian_Info  

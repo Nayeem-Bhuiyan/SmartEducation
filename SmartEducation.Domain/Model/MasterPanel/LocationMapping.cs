@@ -11,6 +11,6 @@ namespace SmartEducation.Domain.Model.MasterPanel
     {
         [Required]
         [StringLength(100)]
-        public string mappingAreaName { get; set; } //Citycoporation=C,Municipality=M,General=G  
+        public string mappingAreaName { get; set; } //Citycoporation=C,Municipality=M,Union=U 
     }
 }
