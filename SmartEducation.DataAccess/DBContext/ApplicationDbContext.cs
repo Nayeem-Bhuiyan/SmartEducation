@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SmartEducation.Application.ViewModel.Student;
 using SmartEducation.Domain.Model.Auth;
 using SmartEducation.Domain.Model.Employee;
 using SmartEducation.Domain.Model.Exam;
@@ -121,7 +122,7 @@ namespace SmartEducation.DataAccess.DBContext
 
 
         #region ViewModel_Data_Retrive
-        //public DbSet<VmStudent> VmStudent { get; set; } = null;
+        public DbSet<Vm_StudentInfo> Vm_StudentInfo { get; set; } = null;
         #endregion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
