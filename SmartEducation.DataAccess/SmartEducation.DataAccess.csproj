@@ -17,6 +17,7 @@
     <Folder Include="EntityRepository\Event\" />
     <Folder Include="EntityRepository\Exam\" />
     <Folder Include="EntityRepository\Guardian\" />
+    <Folder Include="EntityRepository\Employee\" />
     <Folder Include="EntityRepository\Teacher\" />
   </ItemGroup>
 

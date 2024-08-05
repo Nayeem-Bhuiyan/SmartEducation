@@ -17,7 +17,6 @@
     <Folder Include="EntityService\Event\" />
     <Folder Include="EntityService\Exam\" />
     <Folder Include="EntityService\Guardian\" />
-    <Folder Include="EntityService\Student\" />
     <Folder Include="EntityService\Teacher\" />
     <Folder Include="ServiceHelper\" />
   </ItemGroup>

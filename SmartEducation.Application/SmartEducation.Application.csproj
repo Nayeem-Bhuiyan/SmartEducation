@@ -16,14 +16,13 @@
     <Folder Include="IEntityRepository\Event\" />
     <Folder Include="IEntityRepository\Exam\" />
     <Folder Include="IEntityRepository\Guardian\" />
-    <Folder Include="IEntityRepository\Student\" />
     <Folder Include="IEntityRepository\Teacher\" />
     <Folder Include="IEntityService\Account\" />
     <Folder Include="IEntityService\Attendence\" />
     <Folder Include="IEntityService\Event\" />
     <Folder Include="IEntityService\Exam\" />
     <Folder Include="IEntityService\Guardian\" />
-    <Folder Include="IEntityService\Student\" />
+    <Folder Include="IEntityService\Employee\" />
     <Folder Include="IEntityService\Teacher\" />
   </ItemGroup>
 
