@@ -36,11 +36,11 @@ namespace SmartEducation.DataAccess.EntityRepository.Student
             string resMsg = "";
             if (model.Id>0)
             {
-                _baseRepository.Add(model);
+                _baseRepository.Update(model);
             }
             else
             {
-                _baseRepository.Update(model);
+                _baseRepository.Add(model);
 
             }
 
