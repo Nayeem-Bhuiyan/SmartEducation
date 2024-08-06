@@ -37,6 +37,12 @@ namespace SmartEducation.Presentation.Areas.Student.Controllers
             return View(model);
         }
 
-
+        public IActionResult Delete(int id)
+        {
+            string responseMsg = _StudentInfoService.Delete_StudentInfo(id);
+            //if (responseMsg=="success")
+            //    return RedirectToAction("Index");
+            return RedirectToAction("Index");
+        }
     }
 }
